@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'blog'], function (): void {
     Route::get('', [BlogController::class, 'index']);
-    Route::delete('{article}', [BlogController::class, 'delete']);
-    Route::patch('{article}', [BlogController::class, 'edit']);
     Route::post('', [BlogController::class, 'create']);
+    Route::patch('{article}', [BlogController::class, 'edit']);
+    Route::delete('{article}', [BlogController::class, 'delete']);
 });
 
 Route::post('sendMail',MailController::class);
