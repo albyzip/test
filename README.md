@@ -58,6 +58,6 @@ request:
 request:
 ```ts
 {
-    message: string?
+    message: string
 }
 ```
